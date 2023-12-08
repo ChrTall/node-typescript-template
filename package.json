@@ -1,19 +1,17 @@
 {
   "name": "typescript-template",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "A complete Node.js project template using TypeScript and following general best practices.",
   "keywords": [
-    "typescript",
-    "template"
+    "typescript"
   ],
   "author": {
-    "name": "Chris Wells",
-    "url": "https://chriswells.io"
+    "name": "Christian Tallner"
   },
   "license": "BSD-3-Clause",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chriswells0/node-typescript-template.git"
+    "url": "https://github.com/ChrTall/node-typescript-template"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
