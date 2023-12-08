@@ -20,3 +20,7 @@ export class Example {
 		return param;
 	}
 }
+
+const testExample = new Example();
+testExample.exampleMethod('Hello World');
+console.log('test msg');

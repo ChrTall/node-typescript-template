@@ -13,6 +13,7 @@
     "type": "git",
     "url": "https://github.com/ChrTall/node-typescript-template"
   },
+  "private": true,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
@@ -26,7 +27,7 @@
     "clean:all": "npm run clean && (rm -r ./node_modules || true)",
     "cover": "nyc npm run test",
     "cover:check": "nyc --check-coverage --reporter=lcov npm run test",
-    "lint": "eslint --ext .ts --fix src/**/*.ts test/**/*.ts",
+    "lint": "eslint --ext .ts --fix src/**/*.ts",
     "preversion": "npm run build && npm run cover:check",
     "postversion": "git push && git push --tags",
     "prepare": "npm run build",
@@ -34,6 +35,10 @@
     "test": "mocha",
     "upgrade": "npx npm-check -u",
     "version": "npm run build && npm run changelog:update"
+  },
+  "dependencies": {
+    "rxjs": "^7.8.1",
+    "sitka": "^1.1.1"
   },
   "devDependencies": {
     "@types/chai": "^4.3.5",
@@ -45,6 +50,7 @@
     "conventional-changelog-cli": "^3.0.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.44.0",
+    "eslint-plugin-rxjs": "^5.0.3",
     "mocha": "^10.2.0",
     "nodemon": "^3.0.1",
     "nyc": "^15.1.0",
@@ -56,8 +62,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "dependencies": {
-    "sitka": "^1.1.1"
   }
 }
